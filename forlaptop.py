@@ -37,9 +37,8 @@ class RemoteControlApp:
         self.listener.start()
 
     def connect_bluetooth(self):
-        try:            self.port_menu['menu'].delete(0, 'end')
-
-
+        try:
+            self.port_menu['menu'].delete(0, 'end')
             available_ports = [port.device for port in serial.tools.list_ports.comports()]
             if available_ports:
                 for port in available_ports:
